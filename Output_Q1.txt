@@ -1,0 +1,378 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/03/14 23:43:50 INFO SparkContext: Running Spark version 1.6.0
+16/03/14 23:43:50 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/03/14 23:43:50 ERROR Shell: Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:104)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:86)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:66)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:280)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:271)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:248)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:763)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:748)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:621)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2136)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2136)
+	at scala.Option.getOrElse(Option.scala:120)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2136)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:322)
+	at Q1$.main(Q1.scala:15)
+	at Q1.main(Q1.scala)
+16/03/14 23:43:50 INFO SecurityManager: Changing view acls to: dxs13
+16/03/14 23:43:50 INFO SecurityManager: Changing modify acls to: dxs13
+16/03/14 23:43:50 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dxs13); users with modify permissions: Set(dxs13)
+16/03/14 23:43:51 INFO Utils: Successfully started service 'sparkDriver' on port 49897.
+16/03/14 23:43:51 INFO Slf4jLogger: Slf4jLogger started
+16/03/14 23:43:51 INFO Remoting: Starting remoting
+16/03/14 23:43:51 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.0.6:49910]
+16/03/14 23:43:51 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 49910.
+16/03/14 23:43:51 INFO SparkEnv: Registering MapOutputTracker
+16/03/14 23:43:51 INFO SparkEnv: Registering BlockManagerMaster
+16/03/14 23:43:52 INFO DiskBlockManager: Created local directory at C:\Users\dxs13\AppData\Local\Temp\blockmgr-9e47bcdb-1d38-4784-a91b-2a2595f4dea4
+16/03/14 23:43:52 INFO MemoryStore: MemoryStore started with capacity 1127.3 MB
+16/03/14 23:43:52 INFO SparkEnv: Registering OutputCommitCoordinator
+16/03/14 23:43:52 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+16/03/14 23:43:52 INFO SparkUI: Started SparkUI at http://192.168.0.6:4040
+16/03/14 23:43:52 INFO Executor: Starting executor ID driver on host localhost
+16/03/14 23:43:52 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 49917.
+16/03/14 23:43:52 INFO NettyBlockTransferService: Server created on 49917
+16/03/14 23:43:52 INFO BlockManagerMaster: Trying to register BlockManager
+16/03/14 23:43:52 INFO BlockManagerMasterEndpoint: Registering block manager localhost:49917 with 1127.3 MB RAM, BlockManagerId(driver, localhost, 49917)
+16/03/14 23:43:52 INFO BlockManagerMaster: Registered BlockManager
+16/03/14 23:43:53 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 127.4 KB, free 127.4 KB)
+16/03/14 23:43:53 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 13.9 KB, free 141.3 KB)
+16/03/14 23:43:53 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:49917 (size: 13.9 KB, free: 1127.2 MB)
+16/03/14 23:43:53 INFO SparkContext: Created broadcast 0 from textFile at Q1.scala:16
+16/03/14 23:43:54 WARN : Your hostname, LAPTOP-9HKIIAQR resolves to a loopback/non-reachable address: fe80:0:0:0:2873:b19:b741:d1e3%net2, but we couldn't find any external IP address!
+16/03/14 23:43:56 INFO FileInputFormat: Total input paths to process : 1
+16/03/14 23:43:56 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+16/03/14 23:43:56 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+16/03/14 23:43:56 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+16/03/14 23:43:56 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+16/03/14 23:43:56 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+16/03/14 23:43:56 INFO SparkContext: Starting job: saveAsTextFile at Q1.scala:21
+16/03/14 23:43:56 INFO DAGScheduler: Registering RDD 12 (subtract at Q1.scala:56)
+16/03/14 23:43:56 INFO DAGScheduler: Registering RDD 11 (subtract at Q1.scala:56)
+16/03/14 23:43:56 INFO DAGScheduler: Registering RDD 15 (map at Q1.scala:57)
+16/03/14 23:43:56 INFO DAGScheduler: Registering RDD 17 (map at Q1.scala:20)
+16/03/14 23:43:56 INFO DAGScheduler: Got job 0 (saveAsTextFile at Q1.scala:21) with 2 output partitions
+16/03/14 23:43:56 INFO DAGScheduler: Final stage: ResultStage 4 (saveAsTextFile at Q1.scala:21)
+16/03/14 23:43:56 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+16/03/14 23:43:56 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 3)
+16/03/14 23:43:56 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[12] at subtract at Q1.scala:56), which has no missing parents
+16/03/14 23:43:56 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 5.2 KB, free 146.5 KB)
+16/03/14 23:43:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.9 KB, free 149.4 KB)
+16/03/14 23:43:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:49917 (size: 2.9 KB, free: 1127.2 MB)
+16/03/14 23:43:56 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+16/03/14 23:43:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[12] at subtract at Q1.scala:56)
+16/03/14 23:43:56 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+16/03/14 23:43:56 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[11] at subtract at Q1.scala:56), which has no missing parents
+16/03/14 23:43:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 5.1 KB, free 154.5 KB)
+16/03/14 23:43:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2.8 KB, free 157.3 KB)
+16/03/14 23:43:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:49917 (size: 2.8 KB, free: 1127.2 MB)
+16/03/14 23:43:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+16/03/14 23:43:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[11] at subtract at Q1.scala:56)
+16/03/14 23:43:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+16/03/14 23:43:56 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2286 bytes)
+16/03/14 23:43:56 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+16/03/14 23:43:56 INFO CacheManager: Partition rdd_1_0 not found, computing it
+16/03/14 23:43:56 INFO HadoopRDD: Input split: file:/E:/CS6350 - Big Data Management and Analytics/HW/dataset/soc-LiveJournal1Adj.txt:0+4156181
+16/03/14 23:43:56 INFO MemoryStore: Block rdd_1_0 stored as values in memory (estimated size 10.1 MB, free 10.2 MB)
+16/03/14 23:43:56 INFO BlockManagerInfo: Added rdd_1_0 in memory on localhost:49917 (size: 10.1 MB, free: 1117.1 MB)
+16/03/14 23:43:57 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2834 bytes result sent to driver
+16/03/14 23:43:57 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, partition 1,PROCESS_LOCAL, 2286 bytes)
+16/03/14 23:43:57 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+16/03/14 23:43:57 INFO BlockManager: Found block rdd_1_0 locally
+16/03/14 23:43:57 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1453 ms on localhost (1/2)
+16/03/14 23:44:02 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 2254 bytes result sent to driver
+16/03/14 23:44:02 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2286 bytes)
+16/03/14 23:44:02 INFO Executor: Running task 0.0 in stage 1.0 (TID 2)
+16/03/14 23:44:02 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 4669 ms on localhost (2/2)
+16/03/14 23:44:02 INFO DAGScheduler: ShuffleMapStage 0 (subtract at Q1.scala:56) finished in 6.149 s
+16/03/14 23:44:02 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+16/03/14 23:44:02 INFO DAGScheduler: looking for newly runnable stages
+16/03/14 23:44:02 INFO DAGScheduler: running: Set(ShuffleMapStage 1)
+16/03/14 23:44:02 INFO BlockManager: Found block rdd_1_0 locally
+16/03/14 23:44:02 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ShuffleMapStage 3, ResultStage 4)
+16/03/14 23:44:02 INFO DAGScheduler: failed: Set()
+16/03/14 23:44:03 INFO Executor: Finished task 0.0 in stage 1.0 (TID 2). 2254 bytes result sent to driver
+16/03/14 23:44:03 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, localhost, partition 1,PROCESS_LOCAL, 2286 bytes)
+16/03/14 23:44:03 INFO Executor: Running task 1.0 in stage 1.0 (TID 3)
+16/03/14 23:44:03 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 714 ms on localhost (1/2)
+16/03/14 23:44:03 INFO BlockManager: Found block rdd_1_0 locally
+16/03/14 23:44:27 INFO Executor: Finished task 1.0 in stage 1.0 (TID 3). 2254 bytes result sent to driver
+16/03/14 23:44:27 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 23896 ms on localhost (2/2)
+16/03/14 23:44:27 INFO DAGScheduler: ShuffleMapStage 1 (subtract at Q1.scala:56) finished in 30.710 s
+16/03/14 23:44:27 INFO DAGScheduler: looking for newly runnable stages
+16/03/14 23:44:27 INFO DAGScheduler: running: Set()
+16/03/14 23:44:27 INFO DAGScheduler: waiting: Set(ShuffleMapStage 2, ShuffleMapStage 3, ResultStage 4)
+16/03/14 23:44:27 INFO DAGScheduler: failed: Set()
+16/03/14 23:44:27 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+16/03/14 23:44:27 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[15] at map at Q1.scala:57), which has no missing parents
+16/03/14 23:44:27 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.1 KB, free 10.2 MB)
+16/03/14 23:44:27 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 1934.0 B, free 10.3 MB)
+16/03/14 23:44:27 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:49917 (size: 1934.0 B, free: 1117.1 MB)
+16/03/14 23:44:27 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+16/03/14 23:44:27 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[15] at map at Q1.scala:57)
+16/03/14 23:44:27 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+16/03/14 23:44:27 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, localhost, partition 0,PROCESS_LOCAL, 1956 bytes)
+16/03/14 23:44:27 INFO Executor: Running task 0.0 in stage 2.0 (TID 4)
+16/03/14 23:44:27 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/03/14 23:44:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/03/14 23:44:30 INFO BlockManagerInfo: Removed broadcast_2_piece0 on localhost:49917 in memory (size: 2.8 KB, free: 1117.1 MB)
+16/03/14 23:44:30 INFO BlockManagerInfo: Removed broadcast_1_piece0 on localhost:49917 in memory (size: 2.9 KB, free: 1117.1 MB)
+16/03/14 23:44:58 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+16/03/14 23:44:58 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/03/14 23:48:11 INFO Executor: Finished task 0.0 in stage 2.0 (TID 4). 1375 bytes result sent to driver
+16/03/14 23:48:11 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, localhost, partition 1,PROCESS_LOCAL, 1956 bytes)
+16/03/14 23:48:11 INFO Executor: Running task 1.0 in stage 2.0 (TID 5)
+16/03/14 23:48:11 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 224167 ms on localhost (1/2)
+16/03/14 23:48:11 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/03/14 23:48:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/03/14 23:48:31 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+16/03/14 23:48:31 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/03/14 23:51:49 INFO Executor: Finished task 1.0 in stage 2.0 (TID 5). 1375 bytes result sent to driver
+16/03/14 23:51:49 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 218469 ms on localhost (2/2)
+16/03/14 23:51:49 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+16/03/14 23:51:49 INFO DAGScheduler: ShuffleMapStage 2 (map at Q1.scala:57) finished in 442.636 s
+16/03/14 23:51:49 INFO DAGScheduler: looking for newly runnable stages
+16/03/14 23:51:49 INFO DAGScheduler: running: Set()
+16/03/14 23:51:49 INFO DAGScheduler: waiting: Set(ShuffleMapStage 3, ResultStage 4)
+16/03/14 23:51:49 INFO DAGScheduler: failed: Set()
+16/03/14 23:51:49 INFO DAGScheduler: Submitting ShuffleMapStage 3 (MapPartitionsRDD[17] at map at Q1.scala:20), which has no missing parents
+16/03/14 23:51:49 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 3.6 KB, free 10.2 MB)
+16/03/14 23:51:49 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 2011.0 B, free 10.2 MB)
+16/03/14 23:51:49 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:49917 (size: 2011.0 B, free: 1117.1 MB)
+16/03/14 23:51:49 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+16/03/14 23:51:49 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 3 (MapPartitionsRDD[17] at map at Q1.scala:20)
+16/03/14 23:51:49 INFO TaskSchedulerImpl: Adding task set 3.0 with 2 tasks
+16/03/14 23:51:49 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 6, localhost, partition 0,NODE_LOCAL, 1883 bytes)
+16/03/14 23:51:49 INFO Executor: Running task 0.0 in stage 3.0 (TID 6)
+16/03/14 23:51:49 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+16/03/14 23:51:49 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+16/03/14 23:51:50 INFO BlockManagerInfo: Removed broadcast_3_piece0 on localhost:49917 in memory (size: 1934.0 B, free: 1117.1 MB)
+16/03/14 23:52:11 INFO Executor: Finished task 0.0 in stage 3.0 (TID 6). 1375 bytes result sent to driver
+16/03/14 23:52:11 INFO TaskSetManager: Starting task 1.0 in stage 3.0 (TID 7, localhost, partition 1,NODE_LOCAL, 1883 bytes)
+16/03/14 23:52:11 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 6) in 21378 ms on localhost (1/2)
+16/03/14 23:52:11 INFO Executor: Running task 1.0 in stage 3.0 (TID 7)
+16/03/14 23:52:11 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 2 blocks
+16/03/14 23:52:11 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/03/14 23:52:32 INFO Executor: Finished task 1.0 in stage 3.0 (TID 7). 1375 bytes result sent to driver
+16/03/14 23:52:32 INFO TaskSetManager: Finished task 1.0 in stage 3.0 (TID 7) in 21100 ms on localhost (2/2)
+16/03/14 23:52:32 INFO DAGScheduler: ShuffleMapStage 3 (map at Q1.scala:20) finished in 42.477 s
+16/03/14 23:52:32 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+16/03/14 23:52:32 INFO DAGScheduler: looking for newly runnable stages
+16/03/14 23:52:32 INFO DAGScheduler: running: Set()
+16/03/14 23:52:32 INFO DAGScheduler: waiting: Set(ResultStage 4)
+16/03/14 23:52:32 INFO DAGScheduler: failed: Set()
+16/03/14 23:52:32 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[20] at saveAsTextFile at Q1.scala:21), which has no missing parents
+16/03/14 23:52:32 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 65.7 KB, free 10.3 MB)
+16/03/14 23:52:32 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 22.9 KB, free 10.3 MB)
+16/03/14 23:52:32 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:49917 (size: 22.9 KB, free: 1117.1 MB)
+16/03/14 23:52:32 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+16/03/14 23:52:32 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 4 (MapPartitionsRDD[20] at saveAsTextFile at Q1.scala:21)
+16/03/14 23:52:32 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks
+16/03/14 23:52:32 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 8, localhost, partition 0,NODE_LOCAL, 1894 bytes)
+16/03/14 23:52:32 INFO Executor: Running task 0.0 in stage 4.0 (TID 8)
+16/03/14 23:52:32 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/03/14 23:52:32 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+16/03/14 23:52:41 ERROR Executor: Managed memory leak detected; size = 162570010 bytes, TID = 8
+16/03/14 23:52:41 ERROR Executor: Exception in task 0.0 in stage 4.0 (TID 8)
+java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:482)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:808)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:791)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:656)
+	at org.apache.hadoop.fs.FilterFileSystem.setPermission(FilterFileSystem.java:490)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:462)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:428)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:908)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:801)
+	at org.apache.hadoop.mapred.TextOutputFormat.getRecordWriter(TextOutputFormat.java:123)
+	at org.apache.spark.SparkHadoopWriter.open(SparkHadoopWriter.scala:91)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1193)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1185)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+16/03/14 23:52:41 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 9, localhost, partition 1,NODE_LOCAL, 1894 bytes)
+16/03/14 23:52:41 INFO Executor: Running task 1.0 in stage 4.0 (TID 9)
+16/03/14 23:52:41 WARN TaskSetManager: Lost task 0.0 in stage 4.0 (TID 8, localhost): java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:482)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:808)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:791)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:656)
+	at org.apache.hadoop.fs.FilterFileSystem.setPermission(FilterFileSystem.java:490)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:462)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:428)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:908)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:801)
+	at org.apache.hadoop.mapred.TextOutputFormat.getRecordWriter(TextOutputFormat.java:123)
+	at org.apache.spark.SparkHadoopWriter.open(SparkHadoopWriter.scala:91)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1193)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1185)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+16/03/14 23:52:41 ERROR TaskSetManager: Task 0 in stage 4.0 failed 1 times; aborting job
+16/03/14 23:52:41 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/03/14 23:52:41 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/03/14 23:52:41 INFO TaskSchedulerImpl: Cancelling stage 4
+16/03/14 23:52:41 INFO Executor: Executor is trying to kill task 1.0 in stage 4.0 (TID 9)
+16/03/14 23:52:41 INFO TaskSchedulerImpl: Stage 4 was cancelled
+16/03/14 23:52:41 INFO Executor: Executor killed task 1.0 in stage 4.0 (TID 9)
+16/03/14 23:52:41 INFO DAGScheduler: ResultStage 4 (saveAsTextFile at Q1.scala:21) failed in 8.893 s
+16/03/14 23:52:41 INFO DAGScheduler: Job 0 failed: saveAsTextFile at Q1.scala:21, took 524.922694 s
+Exception in thread "main" 16/03/14 23:52:41 WARN TaskSetManager: Lost task 1.0 in stage 4.0 (TID 9, localhost): TaskKilled (killed intentionally)
+org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 4.0 failed 1 times, most recent failure: Lost task 0.0 in stage 4.0 (TID 8, localhost): java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:482)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:808)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:791)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:656)
+	at org.apache.hadoop.fs.FilterFileSystem.setPermission(FilterFileSystem.java:490)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:462)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:428)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:908)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:801)
+	at org.apache.hadoop.mapred.TextOutputFormat.getRecordWriter(TextOutputFormat.java:123)
+	at org.apache.spark.SparkHadoopWriter.open(SparkHadoopWriter.scala:91)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1193)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1185)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1431)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1419)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1418)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1418)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:799)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:799)
+	at scala.Option.foreach(Option.scala:236)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:799)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1640)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1599)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1588)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:620)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1832)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1845)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1922)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply$mcV$sp(PairRDDFunctions.scala:1213)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply(PairRDDFunctions.scala:1156)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1.apply(PairRDDFunctions.scala:1156)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:150)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:111)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:316)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopDataset(PairRDDFunctions.scala:1156)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$4.apply$mcV$sp(PairRDDFunctions.scala:1060)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$4.apply(PairRDDFunctions.scala:1026)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$4.apply(PairRDDFunctions.scala:1026)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:150)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:111)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:316)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:1026)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$1.apply$mcV$sp(PairRDDFunctions.scala:952)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$1.apply(PairRDDFunctions.scala:952)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopFile$1.apply(PairRDDFunctions.scala:952)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:150)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:111)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:316)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:951)
+	at org.apache.spark.rdd.RDD$$anonfun$saveAsTextFile$1.apply$mcV$sp(RDD.scala:1443)
+	at org.apache.spark.rdd.RDD$$anonfun$saveAsTextFile$1.apply(RDD.scala:1422)
+	at org.apache.spark.rdd.RDD$$anonfun$saveAsTextFile$1.apply(RDD.scala:1422)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:150)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:111)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:316)
+	at org.apache.spark.rdd.RDD.saveAsTextFile(RDD.scala:1422)
+	at Q1$.main(Q1.scala:21)
+	at Q1.main(Q1.scala)
+Caused by: java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(Unknown Source)
+	at org.apache.hadoop.util.Shell.runCommand(Shell.java:482)
+	at org.apache.hadoop.util.Shell.run(Shell.java:455)
+	at org.apache.hadoop.util.Shell$ShellCommandExecutor.execute(Shell.java:715)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:808)
+	at org.apache.hadoop.util.Shell.execCommand(Shell.java:791)
+	at org.apache.hadoop.fs.RawLocalFileSystem.setPermission(RawLocalFileSystem.java:656)
+	at org.apache.hadoop.fs.FilterFileSystem.setPermission(FilterFileSystem.java:490)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:462)
+	at org.apache.hadoop.fs.ChecksumFileSystem.create(ChecksumFileSystem.java:428)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:908)
+	at org.apache.hadoop.fs.FileSystem.create(FileSystem.java:801)
+	at org.apache.hadoop.mapred.TextOutputFormat.getRecordWriter(TextOutputFormat.java:123)
+	at org.apache.spark.SparkHadoopWriter.open(SparkHadoopWriter.scala:91)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1193)
+	at org.apache.spark.rdd.PairRDDFunctions$$anonfun$saveAsHadoopDataset$1$$anonfun$13.apply(PairRDDFunctions.scala:1185)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)
+	at org.apache.spark.scheduler.Task.run(Task.scala:89)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+16/03/14 23:52:41 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+16/03/14 23:52:41 INFO SparkContext: Invoking stop() from shutdown hook
+16/03/14 23:52:41 INFO SparkUI: Stopped Spark web UI at http://192.168.0.6:4040
+16/03/14 23:52:41 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+16/03/14 23:52:41 ERROR DiskBlockManager: Exception while deleting local spark dir: C:\Users\dxs13\AppData\Local\Temp\blockmgr-9e47bcdb-1d38-4784-a91b-2a2595f4dea4
+java.io.IOException: Failed to delete: C:\Users\dxs13\AppData\Local\Temp\blockmgr-9e47bcdb-1d38-4784-a91b-2a2595f4dea4
+	at org.apache.spark.util.Utils$.deleteRecursively(Utils.scala:928)
+	at org.apache.spark.storage.DiskBlockManager$$anonfun$org$apache$spark$storage$DiskBlockManager$$doStop$1.apply(DiskBlockManager.scala:174)
+	at org.apache.spark.storage.DiskBlockManager$$anonfun$org$apache$spark$storage$DiskBlockManager$$doStop$1.apply(DiskBlockManager.scala:170)
+	at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)
+	at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:108)
+	at org.apache.spark.storage.DiskBlockManager.org$apache$spark$storage$DiskBlockManager$$doStop(DiskBlockManager.scala:170)
+	at org.apache.spark.storage.DiskBlockManager.stop(DiskBlockManager.scala:162)
+	at org.apache.spark.storage.BlockManager.stop(BlockManager.scala:1233)
+	at org.apache.spark.SparkEnv.stop(SparkEnv.scala:96)
+	at org.apache.spark.SparkContext$$anonfun$stop$12.apply$mcV$sp(SparkContext.scala:1756)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1229)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1755)
+	at org.apache.spark.SparkContext$$anonfun$3.apply$mcV$sp(SparkContext.scala:596)
+	at org.apache.spark.util.SparkShutdownHook.run(ShutdownHookManager.scala:267)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ShutdownHookManager.scala:239)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:239)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1$$anonfun$apply$mcV$sp$1.apply(ShutdownHookManager.scala:239)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1741)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply$mcV$sp(ShutdownHookManager.scala:239)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:239)
+	at org.apache.spark.util.SparkShutdownHookManager$$anonfun$runAll$1.apply(ShutdownHookManager.scala:239)
+	at scala.util.Try$.apply(Try.scala:161)
+	at org.apache.spark.util.SparkShutdownHookManager.runAll(ShutdownHookManager.scala:239)
+	at org.apache.spark.util.SparkShutdownHookManager$$anon$2.run(ShutdownHookManager.scala:218)
+	at org.apache.hadoop.util.ShutdownHookManager$1.run(ShutdownHookManager.java:54)
+16/03/14 23:52:41 INFO MemoryStore: MemoryStore cleared
+16/03/14 23:52:41 INFO BlockManager: BlockManager stopped
+16/03/14 23:52:41 INFO BlockManagerMaster: BlockManagerMaster stopped
+16/03/14 23:52:41 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+16/03/14 23:52:41 INFO SparkContext: Successfully stopped SparkContext
+16/03/14 23:52:41 INFO ShutdownHookManager: Shutdown hook called
+16/03/14 23:52:41 INFO ShutdownHookManager: Deleting directory C:\Users\dxs13\AppData\Local\Temp\spark-2acee72f-b72f-4f81-a868-8b46e5894c12
